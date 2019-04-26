@@ -1,0 +1,21 @@
+name: echo
+version: 0.1.0
+authors:
+  - weaming <garden.yuen@gmail.com>
+license: MIT
+crystal: 0.28.0
+
+# description: |
+#   Short description of xxx
+
+dependencies:
+  router:
+    github: tbrand/router.cr
+
+# development_dependencies:
+#   webmock:
+#     github: manastech/webmock.cr
+
+targets:
+  echo:
+    main: src/echo.cr
