@@ -21,7 +21,11 @@ module Echo
 
     def run
       server = HTTP::Server.new(route_handler)
-      port = 10000
+      if ENV.has_key? "PORT"
+        port = ENV["PORT"].to_i32
+      else
+        port = 10000
+      end
       server.bind_tcp port
       puts "Listen on http://127.0.0.1:#{port}"
       server.listen
